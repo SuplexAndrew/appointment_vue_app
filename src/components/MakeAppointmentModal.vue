@@ -58,6 +58,11 @@
         <v-text-field
             v-model="countSI"
             label="Количество СИ"
+            type="number"
+            step="any"
+            min="0"
+            ref="input"
+            :rules="[numberRule]"
             solo
         ></v-text-field>
         <v-text-field
@@ -103,6 +108,10 @@ export default {
       contacts: '',
       countSI: '',
       accountNumber: '',
+      numberRule: val => {
+        if(val < 0) return 'Please enter a positive number'
+        return true
+      }
     }
   },
   computed: {

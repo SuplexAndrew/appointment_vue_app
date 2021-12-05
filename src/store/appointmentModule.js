@@ -79,7 +79,7 @@ export default {
         .filter(({size, appointments}) => size > appointments.length)
         .forEach(({time}) => set.add(time))
       const items = [...set].sort()
-      return {select: items[0], items}
+      return {select: state.time, items}
     },
     getDates(state) {
       const set = new Set()
