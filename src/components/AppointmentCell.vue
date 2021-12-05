@@ -15,7 +15,7 @@ export default {
       if (!cell) {
         return ''
       }
-      if (cell.length > 3) {
+      if (cell.length > 2) {
         return cell.length
       }
       return `${cell.length || ''} +`
