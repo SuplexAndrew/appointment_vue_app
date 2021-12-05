@@ -68,7 +68,9 @@
         <v-select
             v-model="ticketType.select"
             :items="ticketType.items"
-            @change="$store.commit('setTicketType', time.select)"
+            item-text="text"
+            item-value="value"
+            @change="$store.commit('setTicketType', ticketType.select)"
             solo
         />
       </v-card-text>

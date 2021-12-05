@@ -20,7 +20,6 @@
           <tbody>
           <tr v-for="(appointment, i) in appointments"
               :key="i">
-            <template v-if="appointment.company">
               <td>{{ appointment.company }}</td>
               <td>{{ appointment.contacts }}</td>
               <td>{{ appointment.ticketType }}</td>
@@ -29,8 +28,6 @@
               <td>
                 <button @click="deleteAppointment(appointment.id)">Удалить</button>
               </td>
-            </template>
-            <td v-else :style="{columnSpan:'all'}">Запись свободна</td>
           </tr>
           </tbody>
         </table>
@@ -74,10 +71,8 @@ export default {
       time: state => state.appointmentModule.time,
       date: state => state.appointmentModule.date,
       modal: state => state.appointmentModule.modal,
-    }),
-    appointments() {
-      return this.$store.getters.getSelectedAppointments
-    }
+      appointments: state => state.appointmentModule.selectedAppointments,
+    })
   }
 }
 </script>

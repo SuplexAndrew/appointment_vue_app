@@ -110,10 +110,6 @@ export default {
       })
 
       return {select: items[0], items}
-    },
-    getSelectedAppointments(state) {
-      const freeSize = 3 - state.selectedAppointments.length
-      return freeSize > 0 ? [...state.selectedAppointments, ...Array(freeSize).fill({})] : state.selectedAppointments
     }
   },
   actions: {
@@ -127,6 +123,7 @@ export default {
         time: state.time,
         ...payload
       }
+      console.log(item)
       try {
         await api.postAppointments(item)
         await dispatch('getAppointments')
