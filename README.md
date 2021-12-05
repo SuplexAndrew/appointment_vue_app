@@ -1,24 +1,20 @@
-# appointment_vue_app
+# Тестовое задание. Фронтэнд часть приложения
 
-## Project setup
-```
-npm install
-```
+## Инструкции по развертыванию:
+1. `npm i`
+2. Запустить сервер - https://github.com/SuplexAndrew/appointment_app_lrvl
+3. В src/api/ изменить путь, если есть необходимость
+4. `npm run serve`
+5. Если ошибка сборки - `export NODE_OPTIONS=--openssl-legacy-provider`
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Главное меню
+!(./screens/main.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## При нажатии на красную ячейку
+!(./screens/app-full.png)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## При нажатии на зеленую ячейку
+!(./screens/app-freeone.png)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Если нажать записаться, то дата и время сохранятся
+!(./screens/newapp.png)
